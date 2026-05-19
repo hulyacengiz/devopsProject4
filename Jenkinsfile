@@ -5,7 +5,8 @@ pipeline {
         DOCKER_IMAGE = 'cengizhulya/devops-project'
         DOCKER_TAG = 'latest'
         // Jenkins Credentials kısmında DockerHub bilgilerin için vereceğin ID:
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' 
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
+        KUBECONFIG = 'C:/Users/hulyacengiz/.kube/config'
     }
 
     tools {
