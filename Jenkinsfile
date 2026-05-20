@@ -4,14 +4,12 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'cengizhulya/devops-project'
         DOCKER_TAG = 'latest'
-        // Jenkins Credentials kısmında DockerHub bilgilerin için vereceğin ID:
         DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
         KUBECONFIG = 'C:/Users/hulyacengiz/.kube/config'
     }
 
     tools {
-        // Manage Jenkins > Tools altında kurduğumuz Maven ismi
-        maven 'maven-3' 
+        maven 'maven-3'
     }
 
     stages {
@@ -54,7 +52,6 @@ pipeline {
         stage('K8s Deploy') {
             steps {
                 echo 'Deploying to Kubernetes...'
-                // Windows'da minikube ile gelen kubectl çalışması için
                 bat 'kubectl apply -f deployment.yaml'
                 bat 'kubectl apply -f service.yaml'
             }
