@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String sayHello() {
-        return "Hello from Kubernetes test3";
+        return "Hello from Kubernetes test4";
     }
 }
 

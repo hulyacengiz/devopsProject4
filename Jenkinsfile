@@ -54,6 +54,7 @@ pipeline {
                 echo 'Deploying to Kubernetes...'
                 bat 'kubectl apply -f deployment.yaml'
                 bat 'kubectl apply -f service.yaml'
+                bat 'kubectl rollout restart deployment devops-project-deployment'
             }
         }
     }
